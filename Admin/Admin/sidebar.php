@@ -4,7 +4,7 @@
     <a href="index.php" class="brand-link">
       <img src="../../img/perfumes/acquadi.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light"  >Fragrance Loungue </span>
+      <span class="brand-text font-weight-light"  >ASAP Accomodation </span>
     </a>
 
     <!-- Sidebar -->
@@ -26,23 +26,23 @@
           <li class="nav-item">
             <a href="customer.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
-              <p style="color:white">
+             
                 CUSTOMERS
-              </p>
+              
             </a>
           </li>
           <li class="nav-item" >
             <a href="products.php" class="nav-link">
               <i class="nav-icon fas fa-industry"></i>
               <p>
-                PRODUCTS
+                PROPERTIES
                 <span class="badge badge-info right"></span>
               </p>
             </a>
               <li class="nav-item">
                 <a href="driver.php" class="nav-link">
                 <i class="nav-icon fas fa-users"></i>
-                  <p>DRIVERS</p>
+                  <p>ROOM SERVICE</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -60,31 +60,25 @@
               </p>
             </a></li>
             <li class="nav-item">
-            <a href="suppliers.php" class="nav-link">
+            <li class="nav-item">
+            <a href="property_managers.php" class="nav-link">
                   <i class="nav-icon fas fa-user-plus "></i>
               <p>
-                SUPPLIER
+                PROPERTY MANAGER
               </p>
             </a></li>
             <li class="nav-item">
-            <a href="stock_managers.php" class="nav-link">
+            <a href="room_service_managers.php" class="nav-link">
                   <i class="nav-icon fas fa-user-plus "></i>
               <p>
-                STOCK MANAGER
-              </p>
-            </a></li>
-            <li class="nav-item">
-            <a href="shipment_managers.php" class="nav-link">
-                  <i class="nav-icon fas fa-user-plus "></i>
-              <p>
-                SHIPMENT MANAGER
+                ROOM SERVICE MANAGER
               </p>
             </a></li>
             <li class="nav-item">
             <a href="track_orders.php" class="nav-link">
             <i class="nav-icon fas fa-industry"></i>
               <p>
-                ORDER TRACKER
+                Reports
               </p>
             </a></li>
 

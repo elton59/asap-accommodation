@@ -45,8 +45,8 @@
 
   <!--Copyright-->
   <div class="footer-copyright py-3">
-    © 2023 Copyright:
-    <a href="#" target="_blank"> eltonokoth</a>
+    © 2024 Copyright:
+    <a href="#" target="_blank"> TEVIN OBIERO</a>
   </div>
   <!--/.Copyright-->
 

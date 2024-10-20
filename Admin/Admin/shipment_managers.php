@@ -10,7 +10,7 @@ include  ("navbar.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
+  <title>ASAP Accomodation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -66,16 +66,16 @@ include  ("navbar.php");
           <div class="col-12">
           <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Pending shipment_manager</h3>
+            <h3 class="card-title">Pending room_service_manager</h3>
           </div>
           <!--card body-->
                 	<div class="card-body">
 <div class="table-responsive ps">
   <table class="table table-bordered table-hover" id="page1">
     <thead class="text-primary">
-     <tr><th>id</th><th>shipment_manager_name</th><th>email</th><th>account_status</th><th>action</th></tr></thead>
+     <tr><th>id</th><th>room_service_manager_name</th><th>email</th><th>account_status</th><th>action</th></tr></thead>
     <?php
-      $result=$mysqli->query("select * from shipment_manager where account_status='pending' order by account_status")or die($mysqli->error);
+      $result=$mysqli->query("select * from room_service_manager where account_status='pending' order by account_status")or die($mysqli->error);
       while ($row=$result->fetch_assoc())
       echo
   "
@@ -85,8 +85,8 @@ include  ("navbar.php");
       <td>". $row ['firstname']."</td>
       <td>". $row ['email']."</td>
       <td>". $row['account_status']."</td>
-      <td><a href='shipment_managers.php?apcid=$row[id]' class='btn btn-success'>Approve</a>
-     <a href='shipment_managerss.php?rjcid=$row[id]' class='btn btn-danger'>Reject</a></td>
+      <td><a href='room_service_managers.php?apcid=$row[id]' class='btn btn-success'>Approve</a>
+     <a href='room_service_managerss.php?rjcid=$row[id]' class='btn btn-danger'>Reject</a></td>
       </tr>
       <tbody>";
       ?>
@@ -108,21 +108,21 @@ include  ("navbar.php");
     if(isset($_GET['apcid']))
   {
     $id=$_GET['apcid'];
-    $result = $mysqli->query("UPDATE shipment_manager SET account_status= 'approved' WHERE id = $id") or die($mysqli->error);
+    $result = $mysqli->query("UPDATE room_service_manager SET account_status= 'approved' WHERE id = $id") or die($mysqli->error);
    
   
         echo '<script>alert("Record Approved!");
-        window.location.replace("shipment_manager.php")';
+        window.location.replace("room_service_manager.php")';
    
   }
    if(isset($_GET['rjcid']))
   {
     $id=$_GET['rjcid'];
-    $result = $mysqli->query("UPDATE shipment_manager SET account_status= 'rejected' WHERE id = $id") or die($mysqli->error);
+    $result = $mysqli->query("UPDATE room_service_manager SET account_status= 'rejected' WHERE id = $id") or die($mysqli->error);
    
   
         echo '<script>alert("Record Rejected!");
-        window.location.replace("shipment_manager.php")';
+        window.location.replace("room_service_manager.php")';
    
   }
   ?>
@@ -130,16 +130,16 @@ include  ("navbar.php");
 </div>
 <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Approved shipment_manager</h3>
+            <h3 class="card-title">Approved room_service_manager</h3>
           </div>
           <!--card body-->
                 	<div class="card-body">
 <div class="table-responsive ps">
   <table class="table table-bordered table-hover" id="page1">
     <thead class="text-primary">
-     <tr><th>id</th><th>shipment_manager_name</th><th>email</th><th>account_status</th></tr></thead>
+     <tr><th>id</th><th>room_service_manager_name</th><th>email</th><th>account_status</th></tr></thead>
     <?php
-      $result=$mysqli->query("select * from shipment_manager where account_status='approved' order by account_status")or die($mysqli->error);
+      $result=$mysqli->query("select * from room_service_manager where account_status='approved' order by account_status")or die($mysqli->error);
       while ($row=$result->fetch_assoc())
       echo
   "
@@ -172,16 +172,16 @@ include  ("navbar.php");
 </div>
 <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Rejected shipment_manager</h3>
+            <h3 class="card-title">Rejected room_service_manager</h3>
           </div>
           <!--card body-->
                 	<div class="card-body">
 <div class="table-responsive ps">
   <table class="table table-bordered table-hover" id="page1">
     <thead class="text-primary">
-     <tr><th>id</th><th>shipment_manager_name</th><th>email</th><th>account_status</th><th>action</th></tr></thead>
+     <tr><th>id</th><th>room_service_manager_name</th><th>email</th><th>account_status</th><th>action</th></tr></thead>
     <?php
-      $result=$mysqli->query("select * from shipment_manager where account_status='rejected' order by account_status")or die($mysqli->error);
+      $result=$mysqli->query("select * from room_service_manager where account_status='rejected' order by account_status")or die($mysqli->error);
       while ($row=$result->fetch_assoc())
       echo
   "
@@ -191,8 +191,8 @@ include  ("navbar.php");
       <td>". $row ['firstname']."</td>
       <td>". $row ['email']."</td>
       <td>". $row['account_status']."</td>
-      <td><a href='shipment_managers.php?apcid=$row[id]' class='btn btn-success'>Approve</a>
-     <a href='shipment_managers.php?rjcid=$row[id]' class='btn btn-danger'>Reject</a></td>
+      <td><a href='room_service_managers.php?apcid=$row[id]' class='btn btn-success'>Approve</a>
+     <a href='room_service_managers.php?rjcid=$row[id]' class='btn btn-danger'>Reject</a></td>
       </tr>
       <tbody>";
       ?>
@@ -228,7 +228,7 @@ include  ("navbar.php");
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="fas fa-chart-pie mr-1"></i>
-                  shipment_manager
+                  room_service_manager
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
@@ -305,7 +305,7 @@ include  ("navbar.php");
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://TEVIN OBIERO.html">TEVIN OBIERO 2024</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

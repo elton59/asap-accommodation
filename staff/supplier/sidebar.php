@@ -4,7 +4,7 @@
     <a href="index.php" class="brand-link" style="background-color:blue">
       <img src="../../img/perfumes/acquadi.jpg" alt=" Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light"  >Fragrance Loungue </span>
+      <span class="brand-text font-weight-light"  >ASAP Accomodation </span>
     </a>
 
     <!-- Sidebar -->

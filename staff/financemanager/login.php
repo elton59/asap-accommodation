@@ -4,7 +4,7 @@ session_start();
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$db = "fragrance_loungue";
+$db = "asap";
 $mysqli = new  mysqli($servername, $username, $password,$db) or die($mysqli->error);
    if(isset($_POST['login']))
 {
@@ -84,7 +84,7 @@ exit();
 					?>
 
 					<span class="login100-form-title p-b-70" style="color:blue">
-						Welcome Fragrance Loungue 
+						Welcome ASAP Accomodation 
 					</span>
 					<span class="login100-form-avatar">
 						<img src="../../img/perfumes/acquadi.jpg" alt="AVATAR">

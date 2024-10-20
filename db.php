@@ -2,7 +2,7 @@
 $servername='localhost'; 
 $username='root';
 $password=''; 
-$db='fragrance_loungue';
+$db='asap';
 
 
 

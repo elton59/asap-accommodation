@@ -106,16 +106,16 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `email`, `location`, `status`) VALUES
-(42, 'joe', 'ambrosedeh@gmail.com', 'kisumu  ', 'rejected'),
+(42, 'joe', 'ambrosedeh@gmail.com', 'nyeri  ', 'rejected'),
 (43, 'mike', 'den@gmail.com', 'tao  ', 'approved');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `drivers`
+-- Table structure for table `room_service`
 --
 
-CREATE TABLE `drivers` (
+CREATE TABLE `room_service` (
   `driver_id` int(50) NOT NULL,
   `driver_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -124,10 +124,10 @@ CREATE TABLE `drivers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `drivers`
+-- Dumping data for table `room_service`
 --
 
-INSERT INTO `drivers` (`driver_id`, `driver_name`, `email`, `van_id`, `status`) VALUES
+INSERT INTO `room_service` (`driver_id`, `driver_name`, `email`, `van_id`, `status`) VALUES
 (8, 'joe', 'joe@gmail.com', '11', 'rejected'),
 (9, 'johnny', 'johny@gmail.com', '', 'rejected');
 
@@ -195,7 +195,7 @@ CREATE TABLE `feedback` (
 
 INSERT INTO `feedback` (`message_id`, `email`, `message`, `status`) VALUES
 (1, '', '0', 'unread'),
-(2, 'pato@gmail.com', 'good work elton', 'unread');
+(2, 'pato@gmail.com', 'good work TEVIN OBIERO', 'unread');
 
 -- --------------------------------------------------------
 
@@ -388,9 +388,9 @@ ALTER TABLE `customers`
   ADD PRIMARY KEY (`customer_id`);
 
 --
--- Indexes for table `drivers`
+-- Indexes for table `room_service`
 --
-ALTER TABLE `drivers`
+ALTER TABLE `room_service`
   ADD PRIMARY KEY (`driver_id`);
 
 --
@@ -482,9 +482,9 @@ ALTER TABLE `customers`
   MODIFY `customer_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `drivers`
+-- AUTO_INCREMENT for table `room_service`
 --
-ALTER TABLE `drivers`
+ALTER TABLE `room_service`
   MODIFY `driver_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --

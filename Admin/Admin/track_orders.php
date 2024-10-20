@@ -1,166 +1,110 @@
-
 <?php
 session_start();
-include("../db.php");
-include  "sidebar.php";
-include  "navbar.php";
+include  ("../db.php");
+include("navbar.php");
+include("sidebar.php");
+
+if (!isset($_SESSION['username'])) {
+    header('location:login.php');
+}
+
+// Fetch the booking reports data
+$query = "
+    SELECT 
+        orders.id as order_id, 
+        products.product_name as property_name, 
+        orders.orderdate as booking_date, 
+        customers.firstname as customer_name, 
+        customers.email as customer_email, 
+        orders.order_status as order_status
+    FROM 
+        orders 
+    JOIN 
+        products ON orders.product_id = products.id 
+    JOIN 
+        customers ON orders.customer_id = customers.customer_id 
+    WHERE 
+        orders.order_status = 'occupied' OR orders.order_status = 'exited'
+    ORDER BY 
+        orders.orderdate DESC
+";
+$result = $mysqli->query($query) or die($mysqli->error);
 ?>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Property Booking Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-          
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="addsales.php">New</a></li>
-               <li class="breadcrumb-item"><a href="salesdelete.php">Delete</a></li>      
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h2 class="text-center">Property Booking Reports</h2>
+                            </div>
+                            <div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Property Name</th>
+                                            <th>Booked By</th>
+                                            <th>Customer Email</th>
+                                            <th>Booking Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php while ($row = $result->fetch_assoc()): ?>
+                                            <tr>
+                                                <td><?php echo $row['order_id']; ?></td>
+                                                <td><?php echo $row['property_name']; ?></td>
+                                                <td><?php echo $row['customer_name']; ?></td>
+                                                <td><?php echo $row['customer_email']; ?></td>
+                                                <td><?php echo $row['booking_date']; ?></td>
+                                                <td><?php echo $row['order_status']; ?></td>
+                                            </tr>
+                                        <?php endwhile; ?>
+                                    </tbody>
+                                </table>
+                                <div class="text-right">
+                                    <a href="oreport.php" class="btn btn-danger"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-            <h3 class="card-title">Order Tracker</h3>
-          </div>
-          <!--card body-->
-                  <div class="class-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                      <thead>
-                        <tr><th>SALEID</th><th>PRODUCTNAME</th><th>DESCRIPTION</th><th>QUANTITY</th><th>COST</th><th>STATUS</th></tr>
-                      </thead>
-                     <?php
-                      $total = 0;
-                 $result=$mysqli->query("SELECT orders.quantity as qty,products.cost_per_item as pci,orders.id as orderid,orders.order_status as order_status,products.product_name as prodname,products.description as proddesc,customers.customer_id as custid from orders join products on orders.product_id=products.id join customers on customers.customer_id=orders.customer_id ");
-                 while($row=$result->fetch_assoc())
-                 {  
-                  $pci=$row['pci'];
-                  $qty=$row['qty'];
-                  $cost=$qty*$pci;
-                  $total += $cost;
-                  echo
-
-                    "
-                    <tbody>
-                    <td>".$row['orderid']."</td>
-                    <td>".$row['prodname']."</td>
-                    <td>".$row['proddesc']."</td>
-                    <td>".$row['qty']."</td>
-                    <td>".$total."</td>
-                    <td>".$row['order_status']."</td>
-                   
-                    </tbody>
-                    "
-                  ;}
-            ?>
-</table>
-<td><a href='../sreport.php' class='btn btn-danger'>Export to PDF</a></td>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <strong>&copy; 2024 <a href="http://TEVIN OBIERO.html">TEVIN OBIERO</a>.</strong>
+        All rights reserved.
+    </footer>
 </div>
-</div>
-
-           
-
-            
-          </section>
-          <!-- right col -->
-        </div>
-        <!-- /.row (main row) -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-    
-    </div>
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
+<!-- Bootstrap -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>

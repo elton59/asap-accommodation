@@ -86,7 +86,7 @@ $mysqli=new mysqli($servername,$username,$password,$db);
   if(isset($_GET['did']))
   {
   $driver_id=$_GET['did'];
-  $result=$mysqli->query("delete from drivers where driver_id='$driver_id'")or die($mysqli->error);
+  $result=$mysqli->query("delete from room_service where driver_id='$driver_id'")or die($mysqli->error);
 
     echo'<script>alert("Record deleted succesfully!");
     window.location.replace("driver.php");

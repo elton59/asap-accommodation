@@ -9,7 +9,7 @@ include  "navbar.php";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
+  <title>ASAP Accomodation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -46,7 +46,7 @@ include  "navbar.php";
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="adddrivers.php">New</a></li>
+              <li class="breadcrumb-item"><a href="addroom_service.php">New</a></li>
               <li class="breadcrumb-item"><a href="driverdelete.php">Delete</a></li>
       
             </ol>
@@ -64,7 +64,7 @@ include  "navbar.php";
           <div class="col-12">
           <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Pending drivers</h3>
+            <h3 class="card-title">Pending room_service</h3>
           </div>
           <!--card body-->
                   <div class="class-body">
@@ -73,7 +73,7 @@ include  "navbar.php";
                         <tr><th>DRIVER_ID</th><th>DRIVER_NAME</th><th>EMAIL</th><th>VAN_ID</th><th>STATUS</th><th>ACTION</tr>
                       </thead>
                       <?php
-                  $result=$mysqli->query("select * from drivers where account_status='pending'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from room_service where account_status='pending'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -99,7 +99,7 @@ include  "navbar.php";
     if(isset($_GET['apdid']))
   {
     $driver_id=$_GET['apdid'];
-    $result = $mysqli->query("UPDATE drivers SET Status= 'approved' WHERE driver_id = $driver_id") or die($mysqli->error);
+    $result = $mysqli->query("UPDATE room_service SET Status= 'approved' WHERE driver_id = $driver_id") or die($mysqli->error);
    
   
         echo '<script>alert("Record Approved!")</script>';
@@ -108,7 +108,7 @@ include  "navbar.php";
      if(isset($_GET['rjdid']))
   {
     $driver_id=$_GET['rjdid'];
-    $result = $mysqli->query("UPDATE drivers SET Status= 'rejected' WHERE driver_id = $driver_id") or die($mysqli->error);
+    $result = $mysqli->query("UPDATE room_service SET Status= 'rejected' WHERE driver_id = $driver_id") or die($mysqli->error);
    
   
        echo '<script>alert("Record Rejected!")</script>';
@@ -118,7 +118,7 @@ include  "navbar.php";
 </div>
 <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Approved Drivers</h3>
+            <h3 class="card-title">Approved room_service</h3>
           </div>
           <!--card body-->
                   <div class="class-body">
@@ -127,7 +127,7 @@ include  "navbar.php";
                         <tr><th>DRIVER_ID</th><th>DRIVER_NAME</th><th>EMAIL</th><th>VAN_ID</th><th>STATUS</th></tr>
                       </thead>
                       <?php
-                  $result=$mysqli->query("select * from drivers where account_status='approved'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from room_service where account_status='approved'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -150,7 +150,7 @@ include  "navbar.php";
 </div>
 <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Rejected drivers</h3>
+            <h3 class="card-title">Rejected room_service</h3>
           </div>
           <!--card body-->
                   <div class="class-body">
@@ -159,7 +159,7 @@ include  "navbar.php";
                         <tr><th>DRIVER_ID</th><th>DRIVER_NAME</th><th>EMAIL</th><th>VAN_ID</th><th>STATUS</th></tr>
                       </thead>
                       <?php
-                  $result=$mysqli->query("select * from drivers where account_status='rejected'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from room_service where account_status='rejected'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -194,7 +194,7 @@ include  "navbar.php";
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://TEVIN OBIERO.html">TEVIN OBIERO 2024</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

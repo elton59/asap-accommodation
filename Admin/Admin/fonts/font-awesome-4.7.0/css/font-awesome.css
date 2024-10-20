@@ -2217,11 +2217,11 @@
 .fa-id-badge:before {
   content: "\f2c1";
 }
-.fa-drivers-license:before,
+.fa-room_service-license:before,
 .fa-id-card:before {
   content: "\f2c2";
 }
-.fa-drivers-license-o:before,
+.fa-room_service-license-o:before,
 .fa-id-card-o:before {
   content: "\f2c3";
 }

@@ -10,7 +10,7 @@ include  ("navbar.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
+  <title>ASAP Accomodation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -68,16 +68,16 @@ include  ("navbar.php");
           <div class="card">
 
             <div class="card-header">
-            <h3 class="card-title">Delete Drivers</h3>
+            <h3 class="card-title">Delete room_service</h3>
           </div>
           <!--card body-->
                   <div class="card-body">
                     <div class="table-responsive ps">
                   <table class="table table-bordered table-hover" id="page1">
                   <thead class="text-primary">
-                  <th>DriversID</th><th>DriversName</th><th>email</th><th>VanID</th><th>Status</th><th>Action</th></thead>
+                  <th>room_serviceID</th><th>room_serviceName</th><th>email</th><th>VanID</th><th>Status</th><th>Action</th></thead>
                     <?php
-                  $result=$mysqli->query("select * from drivers")or die($mysqli->error);
+                  $result=$mysqli->query("select * from room_service")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -106,7 +106,7 @@ include  ("navbar.php");
   if(isset($_GET['did']))
   {
     $driver_id=$_GET['did'];
-    $result=$mysqli->query("select * from drivers where driver_id=$driver_id")or die($mysqli->error);
+    $result=$mysqli->query("select * from room_service where driver_id=$driver_id")or die($mysqli->error);
     $row=$result->fetch_array();
     $dname=$row['driver_name'];
     $demail=$row['email'];
@@ -122,7 +122,7 @@ include  ("navbar.php");
   ?>
   
             <div class="card-header">
-            <h3 class="card-title">update Drivers</h3>
+            <h3 class="card-title">update room_service</h3>
 
           </div>
           <!--card body-->
@@ -176,7 +176,7 @@ include  ("navbar.php");
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://TEVIN OBIERO.html">TEVIN OBIERO 2024</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

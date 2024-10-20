@@ -108,7 +108,7 @@ include  "navbar.php";
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="http://elton.html">Joylene Wanjugu</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="http://TEVIN OBIERO.html">Jtevin obiero</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.2-pre

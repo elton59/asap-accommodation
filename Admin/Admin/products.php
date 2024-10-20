@@ -9,7 +9,7 @@ include  "navbar.php";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
+  <title>ASAP Accomodation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -63,14 +63,82 @@ include  "navbar.php";
           </div>
           <!--card body-->
                 	<div class="card-body">
-                    <p> PRODUCTS</p>
+                    <p> Pending Properties</p>
                     <table id="example2" class="table table-bordered table-hover">
                       <thead>
-                        <tr><th>PRODUCT_ID</th><th>PRODUCT_NAME</th><th>PRODUCT_Image</th><th>QUANTITY</th><th>STATUS</th></tr>
+                        <tr><th>PROPERTY_ID</th><th>PROPERTY_NAME</th><th>PRERTY_Image</th><th>QUANTITY</th><th>STATUS</th></tr>
                       </thead>
                     
                        <?php
-                  $result=$mysqli->query("select * from products")or die($mysqli->error);
+                  $result=$mysqli->query("select * from products where status='pending'")or die($mysqli->error);
+                  while($row=$result->fetch_assoc())
+                  {
+                    echo
+
+                    "
+                    <tbody>
+                    <td>".$row['id']."</td>
+                    <td>".$row['product_name']."</td>
+                    <td><img src='../../img/perfumes/".$row['product_img_name']."' alt='Product Image'></td>
+                    <td>".$row['quantity']."</td>
+                    <td>".$row['status']."</td>
+                  <td> <a href='products.php?aprpid=$row[id]' class='btn btn-success'>Approve<a>
+                   </td>
+                   </tbody>
+                    "
+                  ;}
+            ?>
+
+</table>
+<td><a href='../rawreport.php' class='btn btn-danger'>Export to PDF</a></td>
+</div>
+<?php
+    if(isset($_GET['aprpid']))
+  {
+    $product_id=$_GET['aprpid'];
+    $result = $mysqli->query("UPDATE products SET Status= 'approved' WHERE id = $product_id") or die($mysqli->error);
+   
+  
+        echo '<script>alert("Record Approved!");
+        window.location.replace("products.php")';
+   
+  }
+     if(isset($_GET['rjrpid']))
+  {
+    $product_id=$_GET['rjrpid'];
+    $result = $mysqli->query("UPDATE products SET Status= 'rejected' WHERE product_id = $product_id") or die($mysqli->error);
+   
+  
+        echo '<script>alert("Record Approved!");
+        window.location.replace("products.php")';
+   
+  }
+  ?>
+</div>
+
+         
+               
+</section>      
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="card">
+            <div class="card-header">
+               <!--
+            <h3 class="card-title"><h3>Raw products </h3>
+          </div>
+          <!--card body-->
+                	<div class="card-body">
+                    <p> Approved Properties</p>
+                    <table id="example2" class="table table-bordered table-hover">
+                      <thead>
+                        <tr><th>PROPERTY_ID</th><th>PROPERTY_NAME</th><th>PROPERTY_Image</th><th>QUANTITY</th><th>STATUS</th></tr>
+                      </thead>
+                    
+                       <?php
+                  $result=$mysqli->query("select * from products where status='approved'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -117,7 +185,7 @@ include  "navbar.php";
 
          
                
-</section>              
+</section>         
 <div class="row">
           <!-- Left col -->
           <section class="col-lg-7 connectedSortable">
@@ -126,7 +194,7 @@ include  "navbar.php";
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="fas fa-chart-pie mr-1"></i>
-                  products
+                  Pending Enlistments
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
@@ -196,7 +264,7 @@ include  "navbar.php";
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://TEVIN OBIERO.html">TEVIN OBIERO 2024</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

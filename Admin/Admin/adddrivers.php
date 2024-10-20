@@ -9,7 +9,7 @@ include  ("navbar.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
+  <title>ASAP Accomodation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -48,7 +48,7 @@ include  ("navbar.php");
             //create connection
              $mysqli= new mysqli($servername,$username,$password,$db);
           
-            $sql=$mysqli->query("INSERT INTO drivers(driver_name,email,van_id) VALUES('$dname','$demail','$vid')") or die($mysqli->error);
+            $sql=$mysqli->query("INSERT INTO room_service(driver_name,email,van_id) VALUES('$dname','$demail','$vid')") or die($mysqli->error);
             if($sql){
       
       echo "<script>alert('record added successfully');
@@ -93,7 +93,7 @@ include  ("navbar.php");
           <div class="col-12">
           <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Add Drivers</h3>
+            <h3 class="card-title">Add room_service</h3>
           </div>
           <div class="card-body">
           <?php
@@ -142,7 +142,7 @@ include  ("navbar.php");
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://TEVIN OBIERO.html">TEVIN OBIERO 2024</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

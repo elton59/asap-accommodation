@@ -9,7 +9,7 @@ include("db.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Fragrance Loungue</title>
+  <title>ASAP Accommodation</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -27,7 +27,6 @@ include("db.php");
     }
 
     @media (max-width: 740px) {
-
       html,
       body,
       header,
@@ -37,7 +36,6 @@ include("db.php");
     }
 
     @media (min-width: 800px) and (max-width: 850px) {
-
       html,
       body,
       header,
@@ -45,16 +43,17 @@ include("db.php");
         height: 100vh;
       }
     }
+
+    .filter-container {
+      margin: 20px 0;
+    }
   </style>
 </head>
 
 <body>
 
-
-
   <!--Carousel Wrapper-->
   <div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
-
     <!--Indicators-->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
@@ -65,37 +64,27 @@ include("db.php");
 
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
-
       <!--First slide-->
       <div class="carousel-item active">
         <div class="view" style="background-image: url('./img/frag.jpg'); background-repeat: no-repeat; background-size: cover;">
-
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Welcome to fragrance Loungue</strong>
+                <strong>Discover Your Perfect Stay</strong>
               </h1>
-
               <p>
-                <strong>we care about your appearance</strong>
+                <strong>Our platform connects travelers with trusted property managers</strong>
               </p>
-
               <p class="mb-4 d-none d-md-block">
-                <strong>Looking for a genuine designer fragrance in Kenya? We stock a wide range of perfumes for men, ladies, kids. We also have gifts for special occasions ...</strong>
+                <strong>Our platform connects travelers with trusted property managers across Kenya, offering a seamless booking experience for vacation rentals, serviced apartments, and more. Whether you're looking for a cozy getaway or a long-term stay, find the perfect place to call home during your travels...</strong>
               </p>
-
-              <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Shop Now
-                </i>
-              </a>
+              <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Book Now</a>
             </div>
             <!-- Content -->
-
           </div>
           <!-- Mask & flexbox options-->
-
         </div>
       </div>
       <!--/First slide-->
@@ -103,33 +92,24 @@ include("db.php");
       <!--Second slide-->
       <div class="carousel-item">
         <div class="view" style="background-image: url('./img/frag.jpg'); background-repeat: no-repeat; background-size: cover;">
-
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>You're at the right place</strong>
+                <strong>Simplified Property Management</strong>
               </h1>
-
               <p>
-                <strong>Smell Good</strong>
+                <strong>easy-to-use interface to list</strong>
               </p>
-
               <p class="mb-4 d-none d-md-block">
-                <strong>ABOUT US The Fragrance Lounge was founded in 2007 in Nairobi, Kenya. Fragrance Lounge is one of the leading authentic boutique perfumes</strong>
+                <strong>We provide property owners and managers with an easy-to-use interface to list, manage, and update their properties in real-time. With our secure platform, you'll be able to reach a wider audience and manage bookings effortlessly</strong>
               </p>
-
-              <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Shop Now
-                </i>
-              </a>
+              <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Book Now</a>
             </div>
             <!-- Content -->
-
           </div>
           <!-- Mask & flexbox options-->
-
         </div>
       </div>
       <!--/Second slide-->
@@ -137,37 +117,27 @@ include("db.php");
       <!--Third slide-->
       <div class="carousel-item">
         <div class="view" style="background-image: url('./img/frag.jpg'); background-repeat: no-repeat; background-size: cover;">
-
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong></strong>
-              </h1>
-
-              <p>
                 <strong>Best of the best</strong>
+              </h1>
+              <p>
+                <strong>Seamless Booking Experience</strong>
               </p>
-
               <p class="mb-4 d-none d-md-block">
-                <strong>One of the leading authentic boutique perfumes in East Africa founded in 2007 based on fulfilling international standards of providing authentic and original perfumes from all direct sources including France, Italy, USA and UK.</strong>
+                <strong>With user-friendly features like real-time availability, geolocation services, and detailed property listings, our platform makes finding and booking accommodation quick and stress-free.</strong>
               </p>
-
-              <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Shop Now
-
-              </a>
+              <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Book Now</a>
             </div>
             <!-- Content -->
-
           </div>
           <!-- Mask & flexbox options-->
-
         </div>
       </div>
       <!--/Third slide-->
-
     </div>
     <!--/.Slides-->
 
@@ -181,17 +151,14 @@ include("db.php");
       <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
-
   </div>
   <!--/.Carousel Wrapper-->
 
   <!--Main layout-->
   <main>
     <div class="container">
-
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-
         <!-- Navbar brand -->
         <span class="navbar-brand">Categories:</span>
 
@@ -202,145 +169,184 @@ include("db.php");
 
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="basicExampleNav">
-
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">All
+              <a class="nav-link" href="?category=all">All
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Floral fragrance</a>
+              <a class="nav-link" href="?category=floral">Vacation Rentals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Citrus fragrance</a>
+              <a class="nav-link" href="?category=citrus">Serviced Apartments</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Aquatic fragrance</a>
+              <a class="nav-link" href="?category=aquatic">Budget Accommodations</a>
             </li>
-
           </ul>
           <!-- Links -->
 
-          <form class="form-inline">
+          <form class="form-inline" method="get" action="">
             <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
+              <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
             </div>
           </form>
         </div>
         <!-- Collapsible content -->
-
       </nav>
       <!--/.Navbar-->
 
+      <!--Filter Section-->
+      <div class="filter-container">
+        <form class="form-inline" method="get" action="">
+          <div class="form-group mx-2">
+            <label for="location">Location:</label>
+            <select name="location" id="location" class="form-control">
+              <option value="">Select Location</option>
+              <option value="Kisumu">Kisumu</option>
+              <option value="Nairobi">Nairobi</option>
+              <option value="Nyeri">Nyeri</option>
+              <option value="Mombasa">Mombasa</option>
+            </select>
+          </div>
+
+          <div class="form-group mx-2">
+            <label for="type">Type:</label>
+            <select name="type" id="type" class="form-control">
+              <option value="">Select Type</option>
+              <option value="bnb">Bnb</option>
+              <option value="double">Double</option>
+              <option value="single">Single</option>
+            </select>
+          </div>
+
+          <div class="form-group mx-2">
+            <label for="price">Max Price:</label>
+            <input type="range" class="form-control-range" id="price" name="price" min="0" max="100000" step="100" oninput="this.nextElementSibling.value = this.value">
+            <output>0</output>
+          </div>
+
+          <button type="submit" class="btn btn-primary mx-2">Filter</button>
+        </form>
+      </div>
+      <!--/Filter Section-->
+
       <!--Section: Products v.3-->
       <section class="text-center mb-4">
-
-        <!--Grid row-->
         <div class="row wow fadeIn">
-
-          <!--Grid column-->
           <?php
           $i = 0;
           $product_id = array();
-          $result = $mysqli->query("SELECT * FROM products where status='instock'");
+          $category = isset($_GET['category']) ? $_GET['category'] : 'all';
+          $search = isset($_GET['search']) ? $_GET['search'] : '';
+          $location = isset($_GET['location']) ? $_GET['location'] : '';
+          $type = isset($_GET['type']) ? $_GET['type'] : '';
+          $price = isset($_GET['price']) ? $_GET['price'] : '';
+
+          // Build the query based on the category, location, type, and search
+          $query = "SELECT * FROM products WHERE status='approved' AND stock_balance > 0";
+
+          if ($category !== 'all') {
+            $query .= " AND category='" . $mysqli->real_escape_string($category) . "'";
+          }
+
+          if (!empty($search)) {
+            $query .= " AND (product_name LIKE '%" . $mysqli->real_escape_string($search) . "%' OR category LIKE '%" . $mysqli->real_escape_string($search) . "%')";
+          }
+
+          if (!empty($location)) {
+            $query .= " AND location='" . $mysqli->real_escape_string($location) . "'";
+          }
+
+          if (!empty($type)) {
+            $query .= " AND type='" . $mysqli->real_escape_string($type) . "'";
+          }
+
+          if (!empty($price)) {
+            $query .= " AND cost_per_item <= " . intval($price);
+          }
+
+          $result = $mysqli->query($query);
+
           if ($result === FALSE) {
             die($mysqli->error);
           }
 
           if ($result) {
-
             while ($obj = $result->fetch_object()) {
-
-              echo
-              "
-          <div class='col-lg-3 col-md-6 mb-4' style='overflow-wrap: break-word;
-          word-wrap: break-word;'>
- 
-            <!--Card-->
-            <div class='card'>
-
-              <!--Card image-->
-              <div class='view overlay'>
-                <img src='./img/perfumes/$obj->product_img_name' class='card-img-top'
-                  alt=''>
-                <a href='products.php?id=$obj->id'>
-                  <div class='mask rgba-white-slight'></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class='card-body text-center'>
-                <!--Category & Title-->
-                <a href='' class='grey-text'>
-                  <h5>$obj->category</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href='' class='dark-grey-text'>$obj->product_name
-                      <span class='badge badge-pill danger-color'>NEW</span>
-                    </a>
-                  </strong>
-                </h5>
-
-                <h4 class='font-weight-bold blue-text'>
-                  <strong>Ksh $obj->cost_per_item</strong>
-                </h4>
-
-              </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->";
+              echo "
+                <div class='col-lg-3 col-md-6 mb-4' style='overflow-wrap: break-word; word-wrap: break-word;'>
+                  <div class='card'>
+                    <div class='view overlay'>
+                      <img src='./img/perfumes/$obj->product_img_name' class='card-img-top' alt=''>
+                      <a href='products.php?id=$obj->id'>
+                        <div class='mask rgba-white-slight'></div>
+                      </a>
+                    </div>
+                    <div class='card-body text-center'>
+                      <a href='' class='grey-text'>
+                        <h5>$obj->category</h5>
+                      </a>
+                      <h5>
+                        <strong>
+                          <a href='' class='dark-grey-text'>$obj->product_name 
+                            <span class='badge badge-pill danger-color'>NEW</span><br/>
+                          </a>
+                          <a href='' class='dark-grey-text'>location: $obj->location</a>
+                        </strong><br/>
+                        <a href='' class='dark-grey-text'>Type: $obj->type</a>
+                        </strong><br/>
+                        <a href='' class='dark-grey-text'>Rooms: $obj->stock_balance</a>
+                        </strong>
+                      </h5>
+                      <h4 class='font-weight-bold blue-text'>
+                        <strong>Ksh $obj->cost_per_item</strong>
+                      </h4>
+                    </div>
+                  </div>
+                </div>";
               $i++;
             }
-          } ?>
-
+          }
+          ?>
+        </div>
       </section>
       <!--Section: Products v.3-->
 
       <!--Pagination-->
-      <nav class="d-flex justify-content-center wow fadeIn">
-        <ul class="pagination pg-blue">
-
-          <!--Arrow left-->
+      <nav aria-label="...">
+        <ul class="pagination pagination-circle justify-content-center">
           <li class="page-item disabled">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Previous</span>
-            </a>
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
           </li>
-
           <li class="page-item active">
-            <a class="page-link" href="#">1
-              <span class="sr-only">(current)</span>
-            </a>
+            <a class="page-link" href="#">1</a>
           </li>
           <li class="page-item">
             <a class="page-link" href="#">2</a>
           </li>
-
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
-            </a>
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
           </li>
         </ul>
       </nav>
-      <!--Pagination-->
-      <?php
-      include("footer.php");
-      ?>
+      <!--/Pagination-->
+
+      <?php include("footer.php"); ?>
     </div>
   </main>
   <!--Main layout-->
 
+  <!-- SCRIPTS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/mdb.min.js"></script>
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -356,6 +362,7 @@ include("db.php");
     // Animations initialization
     new WOW().init();
   </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

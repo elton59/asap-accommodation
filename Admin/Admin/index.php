@@ -10,7 +10,7 @@ include  "navbar.php";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fragranec Loungue</title>
+  <title>ASAP Accomodation</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -43,7 +43,7 @@ include  "navbar.php";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark">Admin Dashboard</h1>
           </div><!-- /.col -->  
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -60,6 +60,7 @@ include  "navbar.php";
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
+         
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -82,6 +83,7 @@ include  "navbar.php";
                 <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+          
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -111,11 +113,69 @@ include  "navbar.php";
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
+    
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+             
+                   
+                  <sup style="font-size: 20px">
+              
+                    </sup>
+             
+
+                <p> new Orders</p>  
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+
+              </div>
+                <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>  
+                   
+
+                <p>Sales</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="sales.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="http://elton.html">Joylene Wanjugu</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="http://TEVIN OBIERO.html">Jtevin obiero</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.2-pre
@@ -166,3 +226,4 @@ include  "navbar.php";
 <script src="dist/js/demo.js"></script>
 </body>
 </html>
+  <

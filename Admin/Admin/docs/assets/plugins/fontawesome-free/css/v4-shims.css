@@ -2041,7 +2041,7 @@
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
 
-.fa.fa-drivers-license:before {
+.fa.fa-room_service-license:before {
   content: "\f2c2"; }
 
 .fa.fa-id-card-o {
@@ -2051,11 +2051,11 @@
 .fa.fa-id-card-o:before {
   content: "\f2c2"; }
 
-.fa.fa-drivers-license-o {
+.fa.fa-room_service-license-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
 
-.fa.fa-drivers-license-o:before {
+.fa.fa-room_service-license-o:before {
   content: "\f2c2"; }
 
 .fa.fa-quora {

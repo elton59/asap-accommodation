@@ -42,13 +42,13 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('John Elton');
-$pdf->SetTitle('Drivers report');
+$pdf->SetAuthor('John TEVIN OBIERO');
+$pdf->SetTitle('room_service report');
 $pdf->SetSubject('TCPDF');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData('logo.png', PDF_HEADER_LOGO_WIDTH, 'Fragrance Lounge', 'P.O.BOX 30372, Nairobi', array(128, 0, 128), array(255, 255, 255));
+$pdf->SetHeaderData('logo.png', PDF_HEADER_LOGO_WIDTH, 'ASAP Accomodation', 'P.O.BOX 30372, nyeri', array(128, 0, 128), array(255, 255, 255));
 $pdf->setFooterData(array(0, 64, 0), array(0, 64, 128));
 
 // set header and footer fonts

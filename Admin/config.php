@@ -9,7 +9,7 @@ $errors = array();
 
 // connect to the database
 define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'elton');
+   define('DB_USERNAME', 'TEVIN OBIERO');
    define('DB_PASSWORD', '');
    define('DB_DATABASE', 'ecommerce');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);

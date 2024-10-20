@@ -15,7 +15,7 @@ echo
 '<script>alert("Login success");
 				window.location.replace("Admin/index.php")
 		</script>';
-		$_SESSION['username']=$username;
+		$_SESSION['username']=$user_email;
 
 exit();
 }
@@ -77,7 +77,7 @@ exit();
 					?>
 
 					<span class="login100-form-title p-b-70" style="color:blue">
-						Fragrance Loungue Best of the Best!!
+						ASAP Accomodation Best of the Best!!
 					</span>
 					<span class="login100-form-avatar">
 						<img src="../img/perfumes/acquadi.jpg" alt="AVATAR">

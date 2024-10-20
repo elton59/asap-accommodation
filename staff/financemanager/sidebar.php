@@ -4,7 +4,7 @@
     <a href="index.php" class="brand-link" style="background-color:blue">
       <img src="../../img/perfumes/acquadi.jpg" alt=" Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light"  >Fragrance Loungue </span>
+      <span class="brand-text font-weight-light"  >ASAP Accomodation </span>
     </a>
 
     <!-- Sidebar -->
@@ -23,23 +23,6 @@
                 Dashboard
               </p>
             </a>
-            <li class="nav-item" >
-            <a href="confirm_request.php" class="nav-link">
-              <i class="nav-icon fas fa-industry"></i>
-              <p>
-                MAKE PAYMENT
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-          <li class="nav-item" >
-            <a href="payments.php" class="nav-link">
-              <i class="nav-icon fas fa-industry"></i>
-              <p>
-                PRODUCT PAYMENT 
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-          </li>
           <li class="nav-item" >
             <a href="cpayments.php" class="nav-link">
               <i class="nav-icon fas fa-industry"></i>
